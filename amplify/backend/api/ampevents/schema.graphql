@@ -1,0 +1,13 @@
+type League @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  description: String
+  sportsID: ID @index(name: "bySports")
+}
+
+type Sports @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  description: String
+  Leagues: [League] @hasMany(indexName: "bySports", fields: ["id"])
+}
