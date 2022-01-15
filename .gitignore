@@ -3,6 +3,12 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+.DS_Store
+build/
+node_modules/
+dist/
+.cache
+.next/
 
 # Other files and folders
 .settings/
